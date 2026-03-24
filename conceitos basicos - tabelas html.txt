@@ -1,0 +1,14 @@
+É possível representar tabelas em HTML?
+Sim, o HTML possui um conjunto de tags específicas desenvolvidas exclusivamente para a estruturação e exibição de dados tabulares de forma organizada.
+
+Como estruturar as tags para representar o conteúdo de uma tabela?
+A estrutura básica começa com a tag <table>, que envolve todo o conteúdo; dentro dela, as linhas são criadas com <tr> (table row), e as células de dados dentro de cada linha são definidas com a tag <td> (table data).
+
+Existe diferença entre as tags de cabeçalho e rodapé e as demais tags? Se sim, qual?
+Sim, existem as tags semânticas <thead> (cabeçalho), <tbody> (corpo) e <tfoot> (rodapé), que ajudam a organizar a estrutura lógica da tabela. Além disso, para as células de título, utiliza-se <th> em vez de <td>, o que aplica automaticamente negrito e centralização, conferindo maior importância visual e acessibilidade ao topo ou às laterais da tabela.
+
+Como se faz para incluir uma legenda em uma tabela?
+Para incluir uma legenda ou título descritivo, utiliza-se a tag <caption>. Ela deve ser inserida imediatamente após a tag de abertura <table> para que o título apareça centralizado acima da tabela por padrão.
+
+É possível representar em HTML tabelas em que uma coluna corresponda a mais de uma linha (ou o contrário)? Se sim, como?
+Sim, isso é possível através dos atributos de mesclagem de células. Para fazer uma célula ocupar mais de uma coluna, utiliza-se o atributo colspan="número_de_colunas"; para fazer uma célula ocupar mais de uma linha verticalmente, utiliza-se o atributo rowspan="número_de_linhas".
