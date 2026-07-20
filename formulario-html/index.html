@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição - Feira de Tecnologia 2026</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+  <h1>Inscrição — Feira de Tecnologia 2026</h1>
+  <p>Preencha o formulário para se inscrever no evento da faculdade.</p>
+
+  <form
+    id="formInscricao"
+    action="#"
+    method="post"
+    autocomplete="on"
+    aria-label="Formulário de inscrição na Feira de Tecnologia 2026"
+  >
+
+    <!-- Campo escondido: identifica o formulário -->
+    <input type="hidden" name="formulario_id" value="feira-tech-2026">
+
+    <!-- text + required + placeholder + minlength + maxlength + pattern -->
+    <div>
+      <label for="nome">Nome completo</label>
+      <input
+        type="text"
+        id="nome"
+        name="nome"
+        required
+        placeholder="Ex: Maria Silva"
+        minlength="3"
+        maxlength="60"
+        pattern="[A-Za-zÀ-ÿ\s]+"
+        aria-describedby="ajudaNome"
+      >
+      <small id="ajudaNome">Só letras e espaços. Mínimo 3 caracteres.</small>
+    </div>
+
+    <!-- email -->
+    <div>
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        placeholder="seuemail@exemplo.com"
+        autocomplete="email"
+      >
+    </div>
+
+    <!-- password -->
+    <div>
+      <label for="senha">Senha de acesso ao portal</label>
+      <input
+        type="password"
+        id="senha"
+        name="senha"
+        required
+        minlength="6"
+        maxlength="20"
+        placeholder="Mínimo 6 caracteres"
+        autocomplete="new-password"
+      >
+    </div>
+
+    <!-- number + min + max + step -->
+    <div>
+      <label for="idade">Idade</label>
+      <input
+        type="number"
+        id="idade"
+        name="idade"
+        required
+        min="16"
+        max="100"
+        step="1"
+        placeholder="16"
+      >
+    </div>
+
+    <!-- date -->
+    <div>
+      <label for="nascimento">Data de nascimento</label>
+      <input type="date" id="nascimento" name="nascimento" required>
+    </div>
+
+    <!-- time -->
+    <div>
+      <label for="horario">Horário preferido para check-in</label>
+      <input type="time" id="horario" name="horario" required>
+    </div>
+
+    <!-- datetime-local -->
+    <div>
+      <label for="agendamento">Agendar visita guiada</label>
+      <input type="datetime-local" id="agendamento" name="agendamento">
+    </div>
+
+    <!-- tel + pattern -->
+    <div>
+      <label for="telefone">Telefone</label>
+      <input
+        type="tel"
+        id="telefone"
+        name="telefone"
+        required
+        placeholder="(11) 99999-9999"
+        pattern="\(\d{2}\)\s?\d{4,5}-\d{4}"
+        aria-describedby="ajudaTel"
+      >
+      <small id="ajudaTel">Formato: (11) 99999-9999</small>
+    </div>
+
+    <!-- url -->
+    <div>
+      <label for="portfolio">Link do portfólio (opcional)</label>
+      <input
+        type="url"
+        id="portfolio"
+        name="portfolio"
+        placeholder="https://seusite.com"
+      >
+    </div>
+
+    <!-- search -->
+    <div>
+      <label for="busca">Buscar workshop de interesse</label>
+      <input
+        type="search"
+        id="busca"
+        name="busca"
+        placeholder="Ex: Python, Arduino, UX..."
+      >
+    </div>
+
+    <!-- color -->
+    <div>
+      <label for="cor">Cor preferida para o crachá</label>
+      <input type="color" id="cor" name="cor" value="#0055aa">
+    </div>
+
+    <!-- range -->
+    <div>
+      <label for="interesse">Nível de interesse no evento (1 a 10)</label>
+      <input
+        type="range"
+        id="interesse"
+        name="interesse"
+        min="1"
+        max="10"
+        step="1"
+        value="5"
+        aria-valuemin="1"
+        aria-valuemax="10"
+      >
+    </div>
+
+    <!-- file -->
+    <div>
+      <label for="curriculo">Enviar currículo (PDF)</label>
+      <input type="file" id="curriculo" name="curriculo" accept=".pdf">
+    </div>
+
+    <!-- select + option -->
+    <div>
+      <label for="curso">Curso</label>
+      <select id="curso" name="curso" required>
+        <option value="">Selecione...</option>
+        <option value="ads">Análise e Desenvolvimento de Sistemas</option>
+        <option value="cc">Ciência da Computação</option>
+        <option value="si">Sistemas de Informação</option>
+        <option value="eng">Engenharia de Software</option>
+      </select>
+    </div>
+
+    <!-- radio -->
+    <fieldset>
+      <legend>Modalidade de participação</legend>
+      <label>
+        <input type="radio" name="modalidade" value="presencial" required>
+        Presencial
+      </label>
+      <label>
+        <input type="radio" name="modalidade" value="online">
+        Online
+      </label>
+    </fieldset>
+
+    <!-- checkbox -->
+    <div>
+      <label>
+        <input type="checkbox" id="termos" name="termos" required>
+        Li e aceito os termos de participação
+      </label>
+    </div>
+
+    <div>
+      <label>
+        <input type="checkbox" id="novidades" name="novidades">
+        Quero receber novidades por e-mail
+      </label>
+    </div>
+
+    <!-- textarea -->
+    <div>
+      <label for="observacoes">Observações</label>
+      <textarea
+        id="observacoes"
+        name="observacoes"
+        rows="4"
+        maxlength="300"
+        placeholder="Alguma necessidade especial ou comentário?"
+      ></textarea>
+    </div>
+
+    <!-- readonly -->
+    <div>
+      <label for="local">Local do evento (somente leitura)</label>
+      <input
+        type="text"
+        id="local"
+        name="local"
+        value="Campus Central — Auditório A"
+        readonly
+      >
+    </div>
+
+    <!-- disabled -->
+    <div>
+      <label for="codigo">Código promocional (indisponível)</label>
+      <input
+        type="text"
+        id="codigo"
+        name="codigo"
+        value="PROMO2026"
+        disabled
+        aria-disabled="true"
+      >
+    </div>
+
+    <button type="submit">Enviar inscrição</button>
+    <button type="reset">Limpar</button>
+
+  </form>
+
+</body>
+</html>

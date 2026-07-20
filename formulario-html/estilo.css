@@ -1,0 +1,55 @@
+/* Estilo básico opcional */
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 15px;
+  line-height: 1.5;
+}
+
+h1 {
+  color: #003366;
+}
+
+form div,
+form fieldset {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="url"],
+input[type="search"],
+select,
+textarea {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+fieldset label {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+button {
+  padding: 8px 16px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+small {
+  color: #555;
+}
